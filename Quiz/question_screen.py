@@ -1,5 +1,9 @@
 from customtkinter import *
 from PIL import Image
+import os
+
+# Obtener la ruta absoluta de la imagen
+script_dir = os.path.dirname(__file__)  # Carpeta donde está el archivo main.py
 
 app = CTk()
 app.geometry("585x550")

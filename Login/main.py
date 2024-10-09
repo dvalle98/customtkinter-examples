@@ -1,14 +1,18 @@
 from customtkinter import *
 from PIL import Image
+import os
+
+# Obtener la ruta absoluta de la imagen
+script_dir = os.path.dirname(__file__)  # Carpeta donde está el archivo main.py
 
 app = CTk()
 app.geometry("600x480")
 app.resizable(0,0)
 
-side_img_data = Image.open("side-img.png")
-email_icon_data = Image.open("email-icon.png")
-password_icon_data = Image.open("password-icon.png")
-google_icon_data = Image.open("google-icon.png")
+side_img_data = Image.open(os.path.join(script_dir,"side-img.png"))
+email_icon_data = Image.open(os.path.join(script_dir,"email-icon.png"))
+password_icon_data = Image.open(os.path.join(script_dir,"password-icon.png"))
+google_icon_data = Image.open(os.path.join(script_dir,"google-icon.png"))
 
 side_img = CTkImage(dark_image=side_img_data, light_image=side_img_data, size=(300, 480))
 email_icon = CTkImage(dark_image=email_icon_data, light_image=email_icon_data, size=(20,20))
